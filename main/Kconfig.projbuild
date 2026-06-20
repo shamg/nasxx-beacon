@@ -1,0 +1,25 @@
+menu "nasxx-beacon"
+
+config BEACON_WIFI_SSID
+    string "Wi-Fi SSID"
+    default "myssid"
+    help
+        Beacon 设备连接的 Wi-Fi SSID。生产环境应改为配网流程写入 NVS。
+
+config BEACON_WIFI_PASSWORD
+    string "Wi-Fi Password"
+    default "mypassword"
+    help
+        Wi-Fi 密码。
+
+config BEACON_DEFAULT_BROKER_HOST
+    string "Default MQTT broker host (nxx-server)"
+    default "nasxx.local"
+    help
+        未配对时使用的默认 broker 主机名。配对后会被 NVS 中的值覆盖。
+
+config BEACON_DEFAULT_BROKER_PORT
+    int "Default MQTT broker TLS port"
+    default 8883
+
+endmenu

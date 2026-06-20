@@ -1,0 +1,7 @@
+# nasxx-beacon top-level CMake
+# ESP-IDF v5.x minimal project
+cmake_minimum_required(VERSION 3.16)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+
+project(nasxx-beacon)

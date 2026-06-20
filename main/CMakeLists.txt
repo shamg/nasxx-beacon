@@ -1,0 +1,19 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "beacon_wifi.c"
+        "beacon_mqtt.c"
+        "beacon_wol.c"
+        "beacon_pairing.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        nvs_flash
+        esp_wifi
+        esp_event
+        esp_netif
+        mqtt
+        esp_timer
+        esp_log
+        protocol_examples_common
+)
